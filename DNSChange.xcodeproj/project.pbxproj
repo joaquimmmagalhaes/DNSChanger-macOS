@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A4414391F35DA8B00705A99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4414381F35DA8B00705A99 /* ViewController.swift */; };
+		1A44143B1F35DA8B00705A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A44143A1F35DA8B00705A99 /* Assets.xcassets */; };
+		1A44143E1F35DA8B00705A99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A44143C1F35DA8B00705A99 /* Main.storyboard */; };
+		1A8F27CF1F3953BD00C7851D /* ViewConfigController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8F27CE1F3953BD00C7851D /* ViewConfigController.swift */; };
+		1AD1A0471F363D3200222CDC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD1A0461F363D3200222CDC /* SwiftyJSON.framework */; };
+		1AD1A0481F363D3200222CDC /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD1A0461F363D3200222CDC /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AD1A04A1F387BAC00222CDC /* CreateConfigController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1A0491F387BAC00222CDC /* CreateConfigController.swift */; };
+		1AF0C7541F361AE80076EB10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF0C7531F361AE80076EB10 /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A4414451F35DA8B00705A99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A44142B1F35DA8B00705A99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A4414321F35DA8B00705A99;
+			remoteInfo = DNSChange;
+		};
+		1A4414501F35DA8B00705A99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A44142B1F35DA8B00705A99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A4414321F35DA8B00705A99;
+			remoteInfo = DNSChange;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1A4F0A741F36127200F8AC08 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1AD1A0481F363D3200222CDC /* SwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1A4414331F35DA8B00705A99 /* DNSChange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNSChange.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A4414381F35DA8B00705A99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../../../../../../Projects/DNSChange/DNSChange/ViewController.swift; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A44143A1F35DA8B00705A99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A44143D1F35DA8B00705A99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A44143F1F35DA8B00705A99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A4414441F35DA8B00705A99 /* DNSChangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNSChangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A44144F1F35DA8B00705A99 /* DNSChangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNSChangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A8F27CE1F3953BD00C7851D /* ViewConfigController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfigController.swift; sourceTree = "<group>"; };
+		1AD1A0461F363D3200222CDC /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = DNSChange/Carthage/Build/Mac/SwiftyJSON.framework; sourceTree = "<group>"; };
+		1AD1A0491F387BAC00222CDC /* CreateConfigController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateConfigController.swift; path = ../../../../Users/jmagalhaes/Projects/DNSChange/DNSChange/CreateConfigController.swift; sourceTree = DEVELOPER_DIR; };
+		1AF0C7531F361AE80076EB10 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A4414301F35DA8B00705A99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD1A0471F363D3200222CDC /* SwiftyJSON.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A4414411F35DA8B00705A99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A44144C1F35DA8B00705A99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A44142A1F35DA8B00705A99 = {
+			isa = PBXGroup;
+			children = (
+				1AD1A0461F363D3200222CDC /* SwiftyJSON.framework */,
+				1A4414351F35DA8B00705A99 /* DNSChange */,
+				1A4414341F35DA8B00705A99 /* Products */,
+				1A4F0A6F1F3610F500F8AC08 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1A4414341F35DA8B00705A99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A4414331F35DA8B00705A99 /* DNSChange.app */,
+				1A4414441F35DA8B00705A99 /* DNSChangeTests.xctest */,
+				1A44144F1F35DA8B00705A99 /* DNSChangeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A4414351F35DA8B00705A99 /* DNSChange */ = {
+			isa = PBXGroup;
+			children = (
+				1AF0C7531F361AE80076EB10 /* AppDelegate.swift */,
+				1A4414381F35DA8B00705A99 /* ViewController.swift */,
+				1A44143A1F35DA8B00705A99 /* Assets.xcassets */,
+				1A44143C1F35DA8B00705A99 /* Main.storyboard */,
+				1A44143F1F35DA8B00705A99 /* Info.plist */,
+				1AD1A0491F387BAC00222CDC /* CreateConfigController.swift */,
+				1A8F27CE1F3953BD00C7851D /* ViewConfigController.swift */,
+			);
+			path = DNSChange;
+			sourceTree = "<group>";
+		};
+		1A4F0A6F1F3610F500F8AC08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A4414321F35DA8B00705A99 /* DNSChange */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A4414581F35DA8B00705A99 /* Build configuration list for PBXNativeTarget "DNSChange" */;
+			buildPhases = (
+				1A44142F1F35DA8B00705A99 /* Sources */,
+				1A4414301F35DA8B00705A99 /* Frameworks */,
+				1A4414311F35DA8B00705A99 /* Resources */,
+				1A4F0A741F36127200F8AC08 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DNSChange;
+			productName = DNSChange;
+			productReference = 1A4414331F35DA8B00705A99 /* DNSChange.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1A4414431F35DA8B00705A99 /* DNSChangeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A44145B1F35DA8B00705A99 /* Build configuration list for PBXNativeTarget "DNSChangeTests" */;
+			buildPhases = (
+				1A4414401F35DA8B00705A99 /* Sources */,
+				1A4414411F35DA8B00705A99 /* Frameworks */,
+				1A4414421F35DA8B00705A99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A4414461F35DA8B00705A99 /* PBXTargetDependency */,
+			);
+			name = DNSChangeTests;
+			productName = DNSChangeTests;
+			productReference = 1A4414441F35DA8B00705A99 /* DNSChangeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1A44144E1F35DA8B00705A99 /* DNSChangeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A44145E1F35DA8B00705A99 /* Build configuration list for PBXNativeTarget "DNSChangeUITests" */;
+			buildPhases = (
+				1A44144B1F35DA8B00705A99 /* Sources */,
+				1A44144C1F35DA8B00705A99 /* Frameworks */,
+				1A44144D1F35DA8B00705A99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A4414511F35DA8B00705A99 /* PBXTargetDependency */,
+			);
+			name = DNSChangeUITests;
+			productName = DNSChangeUITests;
+			productReference = 1A44144F1F35DA8B00705A99 /* DNSChangeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A44142B1F35DA8B00705A99 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Joaquim Magalhães";
+				TargetAttributes = {
+					1A4414321F35DA8B00705A99 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = FTC46WMH7H;
+						ProvisioningStyle = Automatic;
+					};
+					1A4414431F35DA8B00705A99 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = FTC46WMH7H;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1A4414321F35DA8B00705A99;
+					};
+					1A44144E1F35DA8B00705A99 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = FTC46WMH7H;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1A4414321F35DA8B00705A99;
+					};
+				};
+			};
+			buildConfigurationList = 1A44142E1F35DA8B00705A99 /* Build configuration list for PBXProject "DNSChange" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A44142A1F35DA8B00705A99;
+			productRefGroup = 1A4414341F35DA8B00705A99 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A4414321F35DA8B00705A99 /* DNSChange */,
+				1A4414431F35DA8B00705A99 /* DNSChangeTests */,
+				1A44144E1F35DA8B00705A99 /* DNSChangeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A4414311F35DA8B00705A99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A44143B1F35DA8B00705A99 /* Assets.xcassets in Resources */,
+				1A44143E1F35DA8B00705A99 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A4414421F35DA8B00705A99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A44144D1F35DA8B00705A99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A44142F1F35DA8B00705A99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AF0C7541F361AE80076EB10 /* AppDelegate.swift in Sources */,
+				1AD1A04A1F387BAC00222CDC /* CreateConfigController.swift in Sources */,
+				1A8F27CF1F3953BD00C7851D /* ViewConfigController.swift in Sources */,
+				1A4414391F35DA8B00705A99 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A4414401F35DA8B00705A99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A44144B1F35DA8B00705A99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A4414461F35DA8B00705A99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A4414321F35DA8B00705A99 /* DNSChange */;
+			targetProxy = 1A4414451F35DA8B00705A99 /* PBXContainerItemProxy */;
+		};
+		1A4414511F35DA8B00705A99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A4414321F35DA8B00705A99 /* DNSChange */;
+			targetProxy = 1A4414501F35DA8B00705A99 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1A44143C1F35DA8B00705A99 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A44143D1F35DA8B00705A99 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A4414561F35DA8B00705A99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1A4414571F35DA8B00705A99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		1A4414591F35DA8B00705A99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FTC46WMH7H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DNSChange/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = DNSChange/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pt.joaquimmagalhaes.DNSChange;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1A44145A1F35DA8B00705A99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FTC46WMH7H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DNSChange/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = DNSChange/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pt.joaquimmagalhaes.DNSChange;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1A44145C1F35DA8B00705A99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FTC46WMH7H;
+				INFOPLIST_FILE = DNSChangeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pt.joaquimmagalhaes.DNSChangeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DNSChange.app/Contents/MacOS/DNSChange";
+			};
+			name = Debug;
+		};
+		1A44145D1F35DA8B00705A99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FTC46WMH7H;
+				INFOPLIST_FILE = DNSChangeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pt.joaquimmagalhaes.DNSChangeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DNSChange.app/Contents/MacOS/DNSChange";
+			};
+			name = Release;
+		};
+		1A44145F1F35DA8B00705A99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FTC46WMH7H;
+				INFOPLIST_FILE = DNSChangeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pt.joaquimmagalhaes.DNSChangeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DNSChange;
+			};
+			name = Debug;
+		};
+		1A4414601F35DA8B00705A99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FTC46WMH7H;
+				INFOPLIST_FILE = DNSChangeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pt.joaquimmagalhaes.DNSChangeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DNSChange;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A44142E1F35DA8B00705A99 /* Build configuration list for PBXProject "DNSChange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A4414561F35DA8B00705A99 /* Debug */,
+				1A4414571F35DA8B00705A99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A4414581F35DA8B00705A99 /* Build configuration list for PBXNativeTarget "DNSChange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A4414591F35DA8B00705A99 /* Debug */,
+				1A44145A1F35DA8B00705A99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A44145B1F35DA8B00705A99 /* Build configuration list for PBXNativeTarget "DNSChangeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A44145C1F35DA8B00705A99 /* Debug */,
+				1A44145D1F35DA8B00705A99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A44145E1F35DA8B00705A99 /* Build configuration list for PBXNativeTarget "DNSChangeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A44145F1F35DA8B00705A99 /* Debug */,
+				1A4414601F35DA8B00705A99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A44142B1F35DA8B00705A99 /* Project object */;
+}
