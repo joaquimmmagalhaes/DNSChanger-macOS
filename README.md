@@ -2,7 +2,7 @@
 ### Application to change easy and quickly on macOS systems
 
 # How to download ?
-Just [here](https://github.com/joaquimmagalhaes17/DNSChanger-macOS/releases)
+Just go [here](https://github.com/joaquimmagalhaes17/DNSChanger-macOS/releases) and download :)
 
 # Images
 
