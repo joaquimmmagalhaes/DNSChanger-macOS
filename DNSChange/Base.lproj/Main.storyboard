@@ -597,16 +597,10 @@
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hx9-3U-iP4">
                                 <rect key="frame" x="140" y="162" width="115" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="WI-FI" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="1MZ-UJ-9GJ" id="vU1-pZ-cas">
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="vU1-pZ-cas">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
-                                    <menu key="menu" id="Afc-O5-UKW">
-                                        <items>
-                                            <menuItem title="WI-FI" state="on" id="1MZ-UJ-9GJ"/>
-                                            <menuItem title="Ethernet" id="j4c-go-c4H"/>
-                                            <menuItem title="Both" id="JOu-zv-iqc"/>
-                                        </items>
-                                    </menu>
+                                    <menu key="menu" id="Afc-O5-UKW"/>
                                 </popUpButtonCell>
                                 <connections>
                                     <action selector="adapter_choosen:" target="XfG-lQ-9wD" id="gJj-3f-gSK"/>

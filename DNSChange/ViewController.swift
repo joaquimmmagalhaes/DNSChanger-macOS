@@ -18,7 +18,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var server_four: NSButtonCell!
     @IBOutlet weak var adapter_menu: NSPopUpButton!
     
-    var adapter : String = "WI-FI"
+    var adapter : String = "Wi-Fi"
     var server_one_ip : String = ""
     var server_two_ip : String = ""
     var server_three_ip : String = ""
@@ -26,7 +26,7 @@ class ViewController: NSViewController {
     var config_directory : String = ""
     
     @IBAction func adapter_choosen(_ sender: Any) {
-        adapter = adapter_menu.titleOfSelectedItem ?? "WI-FI"
+        adapter = adapter_menu.titleOfSelectedItem ?? "Wi-Fi"
     }
     @IBOutlet weak var aaa: NSPopUpButton!
     
@@ -35,6 +35,7 @@ class ViewController: NSViewController {
         start_setup()
         current_dns()
         read_json()
+        get_adapter()
     }
     
     @IBAction func reload_button(_ sender: Any) {
@@ -45,6 +46,25 @@ class ViewController: NSViewController {
         current_dns()
         read_json()
     }
+    
+    func get_adapter(){
+        let (adapters_list , _, _) = runCommand("networksetup", "listallnetworkservices")
+        var count : Int = 0
+        
+        if (adapters_list.contains("Wi-Fi")){
+            adapter_menu.addItem(withTitle: "Wi-Fi")
+            count = count + 1
+        }
+        if (adapters_list.contains("Ethernet")){
+            adapter_menu.addItem(withTitle: "Ethernet")
+            count = count + 1
+        }
+        if (count == 2){
+            adapter_menu.addItem(withTitle: "Both")
+        }
+        
+    }
+    
     func start_setup(){
         let (username,_,_) = runCommand("whoami")
         let config_directory_result = "/Users/" + username[0] + "/Documents/DNSChanger"
@@ -157,7 +177,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func change_to_server_one(_ sender: Any) {
-        if (adapter == "WI-FI"){
+        if (adapter == "Wi-Fi"){
             (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_one_ip)
         }else if (adapter == "Ethernet"){
             (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_one_ip)
@@ -170,7 +190,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func change_to_server_two(_ sender: Any) {
-        if (adapter == "WI-FI"){
+        if (adapter == "Wi-Fi"){
             (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_two_ip)
         }else if (adapter == "Ethernet"){
             (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_two_ip)
@@ -183,7 +203,7 @@ class ViewController: NSViewController {
     }
 
     @IBAction func change_to_server_three(_ sender: Any) {
-        if (adapter == "WI-FI"){
+        if (adapter == "Wi-Fi"){
             (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_three_ip)
         }else if (adapter == "Ethernet"){
             (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_three_ip)
@@ -196,7 +216,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func change_to_server_four(_ sender: Any) {
-        if (adapter == "WI-FI"){
+        if (adapter == "Wi-Fi"){
             (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_four_ip)
         }else if (adapter == "Ethernet"){
             (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_four_ip)
@@ -219,11 +239,21 @@ class ViewController: NSViewController {
     }
     
     func current_dns() -> Void {
-        let (output, _, _) = runCommand("networksetup", "-getdnsservers", "Wi-Fi" )
+        var (output, _, _) = runCommand("networksetup", "-getdnsservers", "Wi-Fi" )
         
-        var dns_servers : String = ""
+        var dns_servers : String = "Wi-Fi\n"
         for dns in output{
             dns_servers = dns_servers + dns + "\n";
+        }
+        
+        (output, _, _) = runCommand("networksetup", "-getdnsservers", "Ethernet")
+        
+        if (output[0] != "Ethernet is not a recognized network service."){
+            
+            dns_servers = dns_servers + "Ethernet\n"
+            for dns in output{
+                dns_servers = dns_servers + dns + "\n";
+            }
         }
         
         dns_servers_field.stringValue = dns_servers
