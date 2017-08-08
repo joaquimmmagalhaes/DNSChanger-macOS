@@ -16,5 +16,4 @@ Just go [here](https://github.com/joaquimmagalhaes17/DNSChanger-macOS/releases) 
 ![alt text](https://user-images.githubusercontent.com/10578843/29054019-5ba76934-7beb-11e7-907c-9f66721bffc3.png "View servers")
 
 # Notes!
-* For now only WI-FI is supported. Future releases will have Ethernet support.
 * Only tested in macOS Sierra and requires user password
