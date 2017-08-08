@@ -16,12 +16,19 @@ class ViewController: NSViewController {
     @IBOutlet weak var server_two: NSButtonCell!
     @IBOutlet weak var server_three: NSButtonCell!
     @IBOutlet weak var server_four: NSButtonCell!
+    @IBOutlet weak var adapter_menu: NSPopUpButton!
+    
+    var adapter : String = "WI-FI"
     var server_one_ip : String = ""
     var server_two_ip : String = ""
     var server_three_ip : String = ""
     var server_four_ip : String = ""
     var config_directory : String = ""
     
+    @IBAction func adapter_choosen(_ sender: Any) {
+        adapter = adapter_menu.titleOfSelectedItem ?? "WI-FI"
+    }
+    @IBOutlet weak var aaa: NSPopUpButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -150,26 +157,53 @@ class ViewController: NSViewController {
     }
     
     @IBAction func change_to_server_one(_ sender: Any) {
-        print(server_one_ip)
-        (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_one_ip);
+        if (adapter == "WI-FI"){
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_one_ip)
+        }else if (adapter == "Ethernet"){
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_one_ip)
+        }else{
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_one_ip)
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_one_ip)
+        }
         (_, _, _) = runCommand("killall", "-HUP", "mDNSResponder");
         current_dns()
     }
     
     @IBAction func change_to_server_two(_ sender: Any) {
-        (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_two_ip);
+        if (adapter == "WI-FI"){
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_two_ip)
+        }else if (adapter == "Ethernet"){
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_two_ip)
+        }else{
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_two_ip)
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_two_ip)
+        }
         (_, _, _) = runCommand("killall", "-HUP", "mDNSResponder");
         current_dns()
     }
 
     @IBAction func change_to_server_three(_ sender: Any) {
-        (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_three_ip);
+        if (adapter == "WI-FI"){
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_three_ip)
+        }else if (adapter == "Ethernet"){
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_three_ip)
+        }else{
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_three_ip)
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_three_ip)
+        }
         (_, _, _) = runCommand("killall", "-HUP", "mDNSResponder");
         current_dns()
     }
     
     @IBAction func change_to_server_four(_ sender: Any) {
-        (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_four_ip);
+        if (adapter == "WI-FI"){
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_four_ip)
+        }else if (adapter == "Ethernet"){
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_four_ip)
+        }else{
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_four_ip)
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_four_ip)
+        }
         (_, _, _) = runCommand("killall", "-HUP", "mDNSResponder");
         current_dns()
     }

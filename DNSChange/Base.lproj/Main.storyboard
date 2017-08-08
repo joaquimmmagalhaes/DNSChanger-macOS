@@ -502,7 +502,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZN-bg-1VN">
-                                <rect key="frame" x="64" y="174" width="122" height="32"/>
+                                <rect key="frame" x="14" y="129" width="122" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Server 1" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4zi-e6-Wkw">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -513,7 +513,7 @@
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8d9-fY-51Y">
-                                <rect key="frame" x="64" y="110" width="122" height="32"/>
+                                <rect key="frame" x="14" y="100" width="122" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Server 3" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="k7P-E6-LNr">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -524,7 +524,7 @@
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cn0-Qn-tQA">
-                                <rect key="frame" x="64" y="77" width="122" height="32"/>
+                                <rect key="frame" x="136" y="100" width="122" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Server 4" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cq1-zY-65V">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -544,7 +544,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8fC-Jy-xPg">
-                                <rect key="frame" x="64" y="44" width="122" height="32"/>
+                                <rect key="frame" x="14" y="72" width="122" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Reset DNS" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EWs-l1-Zy5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -555,7 +555,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NLf-T9-q7i">
-                                <rect key="frame" x="64" y="143" width="122" height="32"/>
+                                <rect key="frame" x="136" y="129" width="122" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Server 2" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dNZ-Rd-y9I">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -575,7 +575,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggD-WK-ypO">
-                                <rect key="frame" x="64" y="13" width="122" height="32"/>
+                                <rect key="frame" x="136" y="72" width="122" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Reload Servers" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2Pu-GR-5wE">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -585,9 +585,38 @@
                                     <action selector="reload_button:" target="XfG-lQ-9wD" id="8HK-Ep-hCk"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7i-3A-nUh">
+                                <rect key="frame" x="20" y="165" width="112" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Adapter" id="Aa6-xD-D7V">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hx9-3U-iP4">
+                                <rect key="frame" x="140" y="162" width="115" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="WI-FI" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="1MZ-UJ-9GJ" id="vU1-pZ-cas">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="Afc-O5-UKW">
+                                        <items>
+                                            <menuItem title="WI-FI" state="on" id="1MZ-UJ-9GJ"/>
+                                            <menuItem title="Ethernet" id="j4c-go-c4H"/>
+                                            <menuItem title="Both" id="JOu-zv-iqc"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="adapter_choosen:" target="XfG-lQ-9wD" id="gJj-3f-gSK"/>
+                                </connections>
+                            </popUpButton>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="aaa" destination="Hx9-3U-iP4" id="SGh-SB-hFx"/>
+                        <outlet property="adapter_menu" destination="Hx9-3U-iP4" id="7aS-ff-XXR"/>
                         <outlet property="dns_servers_field" destination="Zuq-YT-EXX" id="3GD-Iz-dit"/>
                         <outlet property="server_four" destination="cq1-zY-65V" id="8Fo-MU-mqj"/>
                         <outlet property="server_one" destination="4zi-e6-Wkw" id="Cfr-IO-0sY"/>
