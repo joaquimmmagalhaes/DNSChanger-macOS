@@ -14,6 +14,7 @@
 		1AD1A0471F363D3200222CDC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD1A0461F363D3200222CDC /* SwiftyJSON.framework */; };
 		1AD1A0481F363D3200222CDC /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD1A0461F363D3200222CDC /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AD1A04A1F387BAC00222CDC /* CreateConfigController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1A0491F387BAC00222CDC /* CreateConfigController.swift */; };
+		1AEB62AE1F3A786600FA14D2 /* MyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB62AD1F3A786600FA14D2 /* MyApplication.swift */; };
 		1AF0C7541F361AE80076EB10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF0C7531F361AE80076EB10 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		1A8F27CE1F3953BD00C7851D /* ViewConfigController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfigController.swift; sourceTree = "<group>"; };
 		1AD1A0461F363D3200222CDC /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = DNSChange/Carthage/Build/Mac/SwiftyJSON.framework; sourceTree = "<group>"; };
 		1AD1A0491F387BAC00222CDC /* CreateConfigController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateConfigController.swift; path = ../../../../Users/jmagalhaes/Projects/DNSChange/DNSChange/CreateConfigController.swift; sourceTree = DEVELOPER_DIR; };
+		1AEB62AD1F3A786600FA14D2 /* MyApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyApplication.swift; sourceTree = "<group>"; };
 		1AF0C7531F361AE80076EB10 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 				1A44143F1F35DA8B00705A99 /* Info.plist */,
 				1AD1A0491F387BAC00222CDC /* CreateConfigController.swift */,
 				1A8F27CE1F3953BD00C7851D /* ViewConfigController.swift */,
+				1AEB62AD1F3A786600FA14D2 /* MyApplication.swift */,
 			);
 			path = DNSChange;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				1AF0C7541F361AE80076EB10 /* AppDelegate.swift in Sources */,
 				1AD1A04A1F387BAC00222CDC /* CreateConfigController.swift in Sources */,
 				1A8F27CF1F3953BD00C7851D /* ViewConfigController.swift in Sources */,
+				1AEB62AE1F3A786600FA14D2 /* MyApplication.swift in Sources */,
 				1A4414391F35DA8B00705A99 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

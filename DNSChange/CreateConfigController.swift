@@ -136,6 +136,4 @@ class CreateConfigController : NSViewController {
         let status = task.terminationStatus
         return (output, error, status)
     }
-
-    
 }
