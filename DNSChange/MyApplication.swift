@@ -12,7 +12,6 @@ import Cocoa
 class MyApplication: NSApplication {
     override func sendEvent(_ event: NSEvent) {
         if event.type == NSEventType.keyDown {
-            
             if (event.modifierFlags.contains(NSEventModifierFlags.command)) {
                 switch event.charactersIgnoringModifiers!.lowercased() {
                 case "x":
@@ -30,5 +29,4 @@ class MyApplication: NSApplication {
         }
         return super.sendEvent(event)
     }
-    
 }

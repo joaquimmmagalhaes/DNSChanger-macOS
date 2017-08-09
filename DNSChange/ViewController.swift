@@ -10,6 +10,7 @@ import Cocoa
 import Foundation
 import SwiftyJSON
 
+
 class ViewController: NSViewController {
     @IBOutlet weak var dns_servers_field: NSTextField!
     @IBOutlet weak var server_one: NSButtonCell!
@@ -53,11 +54,11 @@ class ViewController: NSViewController {
         
         if (adapters_list.contains("Wi-Fi")){
             adapter_menu.addItem(withTitle: "Wi-Fi")
-            count = count + 1
+            count += 1
         }
         if (adapters_list.contains("Ethernet")){
             adapter_menu.addItem(withTitle: "Ethernet")
-            count = count + 1
+            count += 1
         }
         if (count == 2){
             adapter_menu.addItem(withTitle: "Both")
@@ -177,65 +178,39 @@ class ViewController: NSViewController {
     }
     
     @IBAction func change_to_server_one(_ sender: Any) {
-        if (adapter == "Wi-Fi"){
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_one_ip)
-        }else if (adapter == "Ethernet"){
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_one_ip)
-        }else{
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_one_ip)
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_one_ip)
-        }
-        (_, _, _) = runCommand("killall", "-HUP", "mDNSResponder");
-        current_dns()
+        change_dns(server_ip: server_one_ip)
     }
     
     @IBAction func change_to_server_two(_ sender: Any) {
-        if (adapter == "Wi-Fi"){
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_two_ip)
-        }else if (adapter == "Ethernet"){
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_two_ip)
-        }else{
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_two_ip)
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_two_ip)
-        }
-        (_, _, _) = runCommand("killall", "-HUP", "mDNSResponder");
-        current_dns()
+        change_dns(server_ip: server_two_ip)
     }
 
     @IBAction func change_to_server_three(_ sender: Any) {
-        if (adapter == "Wi-Fi"){
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_three_ip)
-        }else if (adapter == "Ethernet"){
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_three_ip)
-        }else{
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_three_ip)
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_three_ip)
-        }
-        (_, _, _) = runCommand("killall", "-HUP", "mDNSResponder");
-        current_dns()
+        change_dns(server_ip: server_three_ip)
     }
     
     @IBAction func change_to_server_four(_ sender: Any) {
-        if (adapter == "Wi-Fi"){
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_four_ip)
-        }else if (adapter == "Ethernet"){
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_four_ip)
-        }else{
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_four_ip)
-            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_four_ip)
-        }
-        (_, _, _) = runCommand("killall", "-HUP", "mDNSResponder");
-        current_dns()
+        change_dns(server_ip: server_four_ip)
     }
-    
     
     @IBAction func reset_dns(_ sender: Any) {
         let (output, _, _) = runCommand("route", "-n", "get" ,"default")
         let gateway : String = output[3].replacingOccurrences(of: "    gateway: ", with: "")
-        (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", gateway);
+        change_dns(server_ip: gateway)
+    }
+    
+    
+    func change_dns(server_ip : String){
+        if (adapter == "Wi-Fi"){
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_ip)
+        }else if (adapter == "Ethernet"){
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_ip)
+        }else{
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", server_ip)
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", server_ip)
+        }
         (_, _, _) = runCommand("killall", "-HUP", "mDNSResponder");
         current_dns()
-        
     }
     
     func current_dns() -> Void {
