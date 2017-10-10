@@ -194,9 +194,8 @@ class ViewController: NSViewController {
     }
     
     @IBAction func reset_dns(_ sender: Any) {
-        let (output, _, _) = runCommand("route", "-n", "get" ,"default")
-        let gateway : String = output[3].replacingOccurrences(of: "    gateway: ", with: "")
-        change_dns(server_ip: gateway)
+        (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", "Empty")
+        current_dns()
     }
     
     
