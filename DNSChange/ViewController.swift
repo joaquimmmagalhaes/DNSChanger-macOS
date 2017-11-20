@@ -10,7 +10,6 @@ import Cocoa
 import Foundation
 import SwiftyJSON
 
-
 class ViewController: NSViewController {
     @IBOutlet weak var dns_servers_field: NSTextField!
     @IBOutlet weak var server_one: NSButtonCell!
@@ -18,6 +17,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var server_three: NSButtonCell!
     @IBOutlet weak var server_four: NSButtonCell!
     @IBOutlet weak var adapter_menu: NSPopUpButton!
+    @IBAction func exit(_ sender: Any) {
+        NSApplication.shared.terminate(self)
+    }
     
     var adapter : String = "Wi-Fi"
     var server_one_ip : String = ""
@@ -194,7 +196,14 @@ class ViewController: NSViewController {
     }
     
     @IBAction func reset_dns(_ sender: Any) {
-        (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", "Empty")
+        if (adapter == "Wi-Fi"){
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", "Empty")
+        }else if (adapter == "Ethernet"){
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", "Empty")
+        }else{
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Wi-Fi", "Empty")
+            (_, _, _) = runCommand("networksetup", "-setdnsservers", "Ethernet", "Empty")
+        }
         current_dns()
     }
     

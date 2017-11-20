@@ -11,8 +11,8 @@ import Cocoa
 
 class MyApplication: NSApplication {
     override func sendEvent(_ event: NSEvent) {
-        if event.type == NSEventType.keyDown {
-            if (event.modifierFlags.contains(NSEventModifierFlags.command)) {
+        if event.type == NSEvent.EventType.keyDown {
+            if (event.modifierFlags.contains(NSEvent.ModifierFlags.command)) {
                 switch event.charactersIgnoringModifiers!.lowercased() {
                 case "x":
                     if NSApp.sendAction(#selector(NSText.cut(_:)), to:nil, from:self) { return }
